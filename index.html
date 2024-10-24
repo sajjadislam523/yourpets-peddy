@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- DaisyUI and Tailwind cdn links -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Title -->
+    <title>Peddy</title>
+</head>
+
+<body>
+    <header>
+        <nav class="w-11/12 py-4 mx-auto">
+            <div class="navbar">
+                <div class="navbar-start">
+                    <div class="flex items-center gap-2">
+                        <img src="assets/icons/logo.webp" alt="logo">
+                        <p class="text-3xl font-extrabold font-lato">Peddy</p>
+                    </div>
+                </div>
+                <div class="hidden navbar-center lg:flex">
+                    <ul class="px-1 space-x-6 menu menu-horizontal">
+                        <li class="font-lato text-[#131313] font-normal"><a href="#">Home</a></li>
+                        <li class="font-lato text-[#131313] font-normal"><a href="#">Shop</a></li>
+                        <li class="font-lato text-[#131313] font-normal"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a href="#"><img class="w-12" src="assets/icons/contact.png" alt="contact"></a>
+                    <div class="dropdown dropdown-end">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-4 shadow space-y-6">
+                            <li class="font-lato text-[#131313] font-normal"><a href="#">Home</a></li>
+                            <li class="font-lato text-[#131313] font-normal"><a href="#">Shop</a></li>
+                            <li class="font-lato text-[#131313] font-normal"><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="flex flex-col items-center justify-center w-11/12 py-4 mx-auto">
+            <div class="flex flex-col items-center justify-center mx-auto space-y-6 md:w-1/2">
+                <p class="font-lato lg:text-2xl md:text-xl text-center text-[#13131399] font-bold">Bringing Families
+                    Together
+                    <span>❤️‍🔥</span>
+                </p>
+                <h1 class="lg:text-5xl text-3xl font-extrabold text-center font-lato text-[#131313]">Your
+                    Path to
+                    Adoption Starts
+                    Here</h1>
+                <p class="text-center font-lato text-[#131313] text-sm md:text-base">Adoption is a beautiful journey,
+                    and we're here
+                    to guide
+                    you through
+                    every step toward building a
+                    loving family.</p>
+                <a href="#categories">
+                    <button
+                        class="bg-[#0E7A81] font-lato text-lg font-bold py-2 px-4 rounded-md text-white hover:bg-transparent hover:outline transition-all duration-150 ease-in-out hover:text-[#0E7A81] hover:outline-2 outline-[#0E7A81]">View
+                        More</button>
+                </a>
+            </div>
+
+            <div class="w-3/4 py-8 mx-auto">
+                <img class="w-full" src="assets/images/pet.webp" alt="pet">
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="flex flex-col items-center justify-center w-11/12 py-4 mx-auto">
+            <div class="flex flex-col items-center justify-center mx-auto space-y-6 md:w-1/2">
+                <h1 class="text-xl font-extrabold lg:text-3xl font-lato text-[#131313]">Adopt Your Best Friend</h1>
+                <p class="text-sm text-center md:text-base text-[#131313B2]">Whether you're looking for a playful puppy
+                    or a
+                    loving cat, we
+                    connect you with pets
+                    that need a forever
+                    home. Start your adoption journey today and bring home your new best friend.</p>
+            </div>
+
+
+            <div id="categories"
+                class="flex flex-col items-center justify-center w-11/12 gap-8 mx-auto my-6 md:flex-row"></div>
+            <div class="flex flex-col items-center justify-between w-11/12 mx-auto my-4 space-y-6 md:flex-row">
+                <p class="text-[#131313] font-lato font-extrabold text-2xl">Best Deals For You</p>
+                <button id="sortByPrice"
+                    class="bg-[#0E7A81] font-lato text-md font-bold py-2 px-4 rounded-md text-white hover:bg-transparent hover:outline transition-all duration-150 ease-in-out hover:text-[#0E7A81] hover:outline-2 outline-[#0E7A81]">Sort
+                    By Price</button>
+            </div>
+        </section>
+
+        <!-- Display pets -->
+        <section class="grid w-11/12 gap-4 px-4 py-4 mx-auto md:grid-cols-3 lg:grid-cols-4">
+
+            <!-- Pet container -->
+            <div class="relative grid grid-cols-1 col-span-2 gap-4 lg:col-span-3 md:grid-cols-2 lg:grid-cols-3">
+                <!-- loading screen -->
+                <div id="loading" class="absolute inset-0 flex items-center justify-center bg-white">
+                    <div
+                        class="w-16 h-16 border-4 border-t-4 border-gray-200 rounded-full border-t-[#0E7A81] animate-spin">
+                    </div>
+                </div>
+
+                <!-- pets -->
+                <div id="pets"
+                    class="grid grid-cols-1 col-span-3 gap-4 p-4 border rounded-lg md:grid-cols-2 lg:grid-cols-3">
+                </div>
+            </div>
+
+            <!-- liked pet section -->
+            <div class="border rounded-lg">
+                <div id="liked" class="grid grid-cols-2 col-span-1 gap-2 p-2">
+                </div>
+            </div>
+
+
+            <!-- Open the modal using ID.showModal() method -->
+            <button class="hidden btn" onclick="detailModal.showModal()">open modal</button>
+            <dialog id="detailModal" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                    <div id="petDetail"></div>
+                    <div class="inline modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button
+                                class="w-full rounded-md bg-[#0E7A811A] border-2 border-[#0E7A8133] hover:bg-[#0E7A81] text-[#0E7A81] hover:text-white">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+
+
+            <!-- Open the modal using ID.showModal() method -->
+            <button class="hidden btn" onclick="adoptionModal.showModal()">open modal</button>
+            <dialog id="adoptionModal" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                    <div id="timerContent flex flex-col items-center justify-center">
+                        <div class="w-16 h-16 mx-auto">
+                            <img src="assets/icons/icons8-handshake-48.png" alt="handshake">
+                        </div>
+                        <h1 class="text-3xl font-extrabold text-center">Congrats</h1>
+                        <p class="text-lg text-center">Adopting process is Start for your pet</p>
+                        <p id="countdown" class="text-4xl font-extrabold text-center font-inter">3</p>
+                    </div>
+                </div>
+            </dialog>
+
+        </section>
+    </main>
+    <footer class="bg-black">
+        <section class="flex flex-col justify-between w-11/12 gap-10 mx-auto md:items-center md:flex-row p-28">
+            <div class="flex flex-col gap-5">
+                <div class="flex items-center gap-2">
+                    <img src="assets/icons/logo.webp" alt="logo">
+                    <p class="text-2xl font-extrabold text-white lg:text-3xl font-lato">Peddy</p>
+                </div>
+                <p class="text-[#FFFFFFE5] text-sm md:text-base">Location: av. Washington 165, NY CA 54003 <br>
+                    Phone: +31 85 964 47 25 <br>
+                    Email: info@yourdomain.com <br>
+                    Openings hours: 9.00 AM - 5.00 PM</p>
+                <div class="flex items-center gap-4">
+                    <img src="assets/icons/facebook.png" alt="facebook">
+                    <img src="assets/icons/x-2 1.png" alt="X">
+                    <img src="assets/icons/youtube.png" alt="youtube">
+                    <img src="assets/icons/instagram.png" alt="instagram">
+                </div>
+            </div>
+            <div class="flex flex-col gap-5">
+                <p class="text-lg font-bold font-inter text-[#FFFFFFE5]">Useful Links</p>
+                <ul class="font-lato text-[#FFFFFF99] space-y-2">
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Animals</li>
+                    <li>Foundation</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="flex flex-col gap-5">
+                <p class="text-lg font-bold font-inter mb-12 text-[#FFFFFFE5]">Drop a Message</p>
+                <input
+                    class="font-inter text-[#FFFFFF99] px-4 py-2 rounded-md bg-[#FFFFFF0D] placeholder:text-[#FFFFFF99] placeholder:font-inter"
+                    placeholder="Enter your email" type="email">
+                <button
+                    class="bg-[#0E7A81] font-lato text-lg font-bold py-2 px-4 rounded-md text-white hover:bg-transparent hover:outline transition-all duration-150 ease-in-out hover:text-[#0E7A81] hover:outline-2 outline-[#0E7A81]">Subscribe</button>
+            </div>
+        </section>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+
+</html>
